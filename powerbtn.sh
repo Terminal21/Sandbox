@@ -1,4 +1,6 @@
 #!/bin/sh
+#user anpassen
+user=''
 cmd=`echo "Shutdown\nRestart\nLogout\n||\nLock\nSuspend\nStandby" | dmenu`
 case $cmd in
 	Shutdown)
@@ -14,9 +16,9 @@ case $cmd in
 		sudo -u m i3lock -c ff0000
 		;;
 	Suspend)
-		sudo -u m i3lock -c ff0000 && sudo sh -c "echo mem > /sys/power/state"
+		sudo -u $user i3lock -c ff0000 && sudo sh -c "echo mem > /sys/power/state"
 		;;
     Standby)
-        sudo -u m i3lock -c ff0000 && sudo sh -c "echo standby > /sys/power/state"
+        sudo -u $user m i3lock -c ff0000 && sudo sh -c "echo standby > /sys/power/state"
         ;;
 esac
