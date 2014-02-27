@@ -2,4 +2,6 @@ Sandbox
 =======
 
 Git Playground Repo
-Hallo Stefan
+Hallo Welt
+
+Dieses Repo ist zum üben da.
